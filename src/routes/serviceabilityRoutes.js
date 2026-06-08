@@ -3,7 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  check
+  check,
+  bulkCheck
 } = require("../controllers/serviceabilityController");
 
 /**
@@ -30,5 +31,7 @@ const {
  */
 
 router.post("/check", check);
+
+router.post("/bulk", bulkCheck);
 
 module.exports = router;
