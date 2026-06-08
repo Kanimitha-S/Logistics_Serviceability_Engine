@@ -32,6 +32,31 @@ const {
 
 router.post("/check", check);
 
+
+/**
+ * @swagger
+ * /api/serviceability/bulk:
+ *   post:
+ *     summary: Bulk serviceability check
+ *     tags:
+ *       - Serviceability
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               origin_pincode:
+ *                 type: string
+ *               destination_pincodes:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *     responses:
+ *       200:
+ *         description: Bulk serviceability checked successfully
+ */
 router.post("/bulk", bulkCheck);
 
 module.exports = router;
