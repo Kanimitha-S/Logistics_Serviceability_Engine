@@ -82,6 +82,28 @@ Request:
   "destination_pincode": "560001"
 }
 ```
+### Check Bulk Serviceability
+
+POST /api/serviceability/bulk
+
+Request:
+
+```json
+{
+ "origin_pincode": "600001",
+ "destination_pincodes": [
+ "560001",
+ "110001",
+ "744101"
+ ]
+}
+```
+
+### CSV Upload API 
+
+POST /api/pincode/upload
+
+
 
 ## Business Rules
 
